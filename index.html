@@ -15,14 +15,21 @@
         <img src="./assets/logo.svg" alt="Logo da NLW Copa">
     </header>
 
-    <div class="card" onclick="changeCard(event)">
-        <img src="./assets/foto.png" alt="Avatar">
+    <div class="card">
+        <img id="asgnmnt_file_img" src="./assets/foto.png" onclick="passFileUrl()" alt="Avatar">
         <div class="info">
-            <h1>Seu nome</h1>
+            <input type="text" id="name" placeholder="Digite seu nome aqui">
             <p>Rumo ao Hexa!</p>
         </div>
     </div>
 
+    <button onclick="exportImage()">Salvar Figurinha</button>
+
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+
+    <input type="file" name="asgnmnt_file" id="asgnmnt_file" class="span8" 
+    style="display:none;" onchange="fileSelected(this)">
+
 </body>
 </html>
